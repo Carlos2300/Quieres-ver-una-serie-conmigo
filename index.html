@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIENVENIDA</title>
+    <style>
+        .body {
+           background-color: hsl(34, 5%, 27%); 
+           text-align: center;   
+        }
+
+        .body__title {
+            color: #f7eeee;
+        }
+
+        .body__img {
+            width: 80%;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="body">
+    <h1 class="body__title">¿QUIERES VER UNA SERIE CONMIGO? </h1>
+    <img 
+        src="https://static2.abc.es/media/play/2019/08/09/netflix-kGnE--620x349@abc.jpg" 
+        alt="Que dices" class="body__img"/>
+        <br>
+    <button id="YES">PERFECTO</button>
+    <button id="NO">NO PUEDO</button>
+    <script>
+        const vutonSi = document.getElementById('YES');
+        const vutonNo = document.getElementById('NO');
+
+        const excelente = () => {
+            alert('ELIJE LA PELICULA O SERIE');
+            alert('🍿DISFRUTEMOS🍿');
+            location.href ='https://www.youtube.com/watch?v=gVgSeseuhTs=20s'
+        }
+
+        const objetivo = () => {
+            vutonNo.style.position = 'absolute';
+            vutonNo.style.top = (Math.random() * window.innerHeight) + 'px';
+            vutonNo.style.left = (Math.random() * window.innerWidth) + 'px';
+        }
+
+        vutonSi.addEventListener('click', excelente);
+        vutonNo.addEventListener('mouseover', objetivo);
+    </script>
+</body>
+</html>
